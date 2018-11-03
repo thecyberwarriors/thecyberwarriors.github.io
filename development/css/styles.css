@@ -465,8 +465,8 @@ h1, h2, h3 {
 }
 
 .about-section {
-  border-top: 0.5rem solid #64a19d;
-  border-bottom: 0.5rem solid #64a19d;
+  border-top: 0.2rem solid #64a19d;
+  border-bottom: 0.2rem solid #64a19d;
   /*padding-top: 10rem;*/
   background: rgba(22, 22, 22, 0.8);
   margin-bottom: 3rem;
