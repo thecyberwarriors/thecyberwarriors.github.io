@@ -392,6 +392,7 @@ h1, h2, h3 {
 @media (max-width: 662px) {
   .masthead {
     background-size: 45em;
+    margin-top: 1rem;
   }
 
   .masthead h1 {
