@@ -12,8 +12,8 @@ var paths = {
   images: 'development/img/**/*',
   landing_style: 'development/css/styles.css',
   landing: 'development/index.html',
-  resources: 'development/resources/manual.html',
-  resources_style: 'development/resources/css/manual.css'
+  resources: 'development/resources/field-manual.html',
+  resources_style: 'development/resources/css/field-manual.css'
 };
  
 gulp.task('clean', function() {
@@ -33,7 +33,7 @@ gulp.task('resources', ['clean'], function() {
   // Minify html 
   return gulp.src(paths.resources)
       .pipe(minifyHtml())
-      .pipe(concat('manual.html'))
+      .pipe(concat('field-manual.html'))
     .pipe(gulp.dest('./resources/'));
 });
 
@@ -60,7 +60,7 @@ gulp.task('resources_style', ['clean'], function() {
   // Minify and copy all css (except vendor scripts)
   return gulp.src(paths.resources_style)
       .pipe(uglifycss({"uglyComments":true}))
-      .pipe(concat('manual.css'))
+      .pipe(concat('field-manual.css'))
     .pipe(gulp.dest('./resources/css'));
 });
 
