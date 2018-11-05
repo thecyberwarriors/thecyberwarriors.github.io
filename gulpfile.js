@@ -10,10 +10,10 @@ var gulp = require('gulp'),
 var paths = {
   scripts: ['development/js/*.js'],
   images: 'development/img/**/*',
-  landingstyle: 'development/css/styles.css',
+  landing_style: 'development/css/styles.css',
   landing: 'development/index.html',
-  manual: 'development/manual.html',
-  manualstyle: 'development/css/manual.css'
+  resources: 'development/resources/manual.html',
+  resources_style: 'development/resources/css/manual.css'
 };
  
 gulp.task('clean', function() {
@@ -29,12 +29,12 @@ gulp.task('landing', ['clean'], function() {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('manual', ['clean'], function() {
+gulp.task('resources', ['clean'], function() {
   // Minify html 
-  return gulp.src(paths.manual)
+  return gulp.src(paths.resources)
       .pipe(minifyHtml())
       .pipe(concat('manual.html'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./resources/'));
 });
 
 gulp.task('scripts', ['clean'], function() {
@@ -48,20 +48,20 @@ gulp.task('scripts', ['clean'], function() {
     .pipe(gulp.dest('js'));
 });
 
-gulp.task('landingstyle', ['clean'], function() {
+gulp.task('landing_style', ['clean'], function() {
   // Minify and copy all css (except vendor scripts)
-  return gulp.src(paths.landingstyle)
+  return gulp.src(paths.landing_style)
       .pipe(uglifycss({"uglyComments":true}))
       .pipe(concat('styles.css'))
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('manualstyle', ['clean'], function() {
+gulp.task('resources_style', ['clean'], function() {
   // Minify and copy all css (except vendor scripts)
-  return gulp.src(paths.manualstyle)
+  return gulp.src(paths.resources_style)
       .pipe(uglifycss({"uglyComments":true}))
       .pipe(concat('manual.css'))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('./resources/css'));
 });
 
 // Copy all static images
@@ -75,10 +75,10 @@ gulp.task('images', ['clean'], function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
-  gulp.watch(paths.landingstyle, ['landingstyle']);
+  gulp.watch(paths.landing_style, ['landing_style']);
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.landing, ['landing']);
 });
  
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['landing', 'landingstyle', 'manual', 'manualstyle', 'scripts', 'images']);
+gulp.task('default', ['landing', 'landing_style', 'resources', 'resources_style', 'scripts', 'images']);
