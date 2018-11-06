@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /development/
+
+SITEMAP: https://www.thecyberwarriors.org/sitemap.xml

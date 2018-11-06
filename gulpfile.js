@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     uglifycss = require('gulp-uglifycss'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
+    sitemap = require('gulp-sitemap'),
     uglify = require('gulp-uglify'),
     del = require('del');
  
@@ -13,9 +14,22 @@ var paths = {
   landing_style: 'development/css/styles.css',
   landing: 'development/index.html',
   resources: 'development/resources/field-manual.html',
-  resources_style: 'development/resources/css/field-manual.css'
+  resources_style: 'development/resources/css/field-manual.css',
+  mapfiles : ['index.html', 'resources/field-manual.html']
 };
  
+gulp.task('sitemap', function() {
+  // Minify and copy all JavaScript (except vendor scripts)
+  // with sourcemaps all the way down
+  return gulp.src(paths.mapfiles, {
+      read: false
+  }).pipe(sitemap({
+      siteUrl: 'https://www.thecyberwarriors.org'
+  }))
+  .pipe(gulp.dest('./'));
+});
+
+
 gulp.task('clean', function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
   return del(['js']);
