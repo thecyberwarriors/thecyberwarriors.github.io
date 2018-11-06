@@ -15,7 +15,8 @@ var paths = {
   landing: 'development/index.html',
   resources: 'development/resources/field-manual.html',
   resources_style: 'development/resources/css/field-manual.css',
-  mapfiles : ['index.html', 'resources/field-manual.html']
+  mapfiles : ['index.html', 'resources/field-manual.html'],
+  error404 : 'development/404.html'  
 };
  
 gulp.task('sitemap', function() {
@@ -32,8 +33,17 @@ gulp.task('sitemap', function() {
 
 gulp.task('clean', function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
-  return del(['js']);
+  //return del(['js']);
 });
+
+gulp.task('error404', ['clean'], function() {
+  // Minify html 
+  return gulp.src(paths.error404)
+      .pipe(minifyHtml())
+      .pipe(concat('404.html'))
+    .pipe(gulp.dest('./'));
+});
+
  
 gulp.task('landing', ['clean'], function() {
   // Minify html 
