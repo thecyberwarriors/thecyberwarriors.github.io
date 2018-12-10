@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootswatch/dist/yeti/_variables.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootswatch/dist/yeti/_bootswatch.scss";
+
+$circuit-green : #64a19d;
+$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+$compliment : #96789f;
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+a, a:hover, a:active, a:focus{
+  outline: 0;
+}
+
+select:-moz-focusring{
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.mat-wrap {
+  background-color: rgba(255,255,255,0.7);
+  padding: 1rem;
+  box-shadow: 8px 8px 2px mix(rgba(255,255,255,0.3), $circuit-green);
+}
+
+.fa-map-marker {
+  font-size: 32px;
+  color: $circuit-green;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+@media (max-width: 414px) {
+  .jumbotron, .card-body {
+    padding: 0
+  }
+}

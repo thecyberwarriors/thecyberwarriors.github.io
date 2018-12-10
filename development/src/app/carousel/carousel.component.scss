@@ -1,0 +1,13 @@
+$circuit-green : #64a19d;
+$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+
+h5 {
+  display: inline-block;
+  border: none;
+  font-weight: bolder;
+  background-color: $circuit-green-dark;
+  color: rgba(255,255,255,1.0);
+  padding: 15px 10px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,1.0);
+}

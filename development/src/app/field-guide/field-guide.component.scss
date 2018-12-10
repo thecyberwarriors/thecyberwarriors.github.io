@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round|Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display');
+
+$circuit-green : #64a19d;
+$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+
+
+.headerobjectswrapper {
+  background-color: mix($circuit-green, $circuit-green-dark);
+  margin: 0;
+  padding: 1rem;
+}
+.label-bg {
+  margin-bottom: 0;
+  color: rgba(255,255,255,1.0);
+  font-weight: bolder;
+}
+
+.head {
+  margin-top: 0;
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+.subhead{
+  text-transform: uppercase;
+  border-bottom: 2px solid #2f2f2f;
+  border-top: 1px solid #2f2f2f;
+  padding: 12px 0 12px 0;
+
+}
+
+.newspaper{
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: top;
+  margin-bottom: 50px;
+  transition: all .7s;
+}
+
+.newspaper + .newspaper {
+  border-left: 1px solid #2f2f2f;
+}
+
+.newspaper .headline {
+  text-align: center;
+  line-height: normal;
+  font-family: 'Playfair Display', serif;
+  display: block;
+  margin: 0 auto;
+}
+
+.newspaper .headline.hl1 {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px 0 10px 0;
+}
+
+
+.newspaper .headline.hl2 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+
+.newspaper .headline.hl2:before{
+  border-top: 1px solid #2f2f2f;
+  content: '';
+  max-width: 100px;
+  height: 7px;
+  display: block;
+  margin: 0 auto;
+}
+
+.newspaper .headline.hl2:after{
+  border-bottom: 1px solid #2f2f2f;
+  content: '';
+  max-width: 100px;
+  height: 13px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.newspaper .headline.hl3{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 36px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl4{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl4:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    max-width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+
+.newspaper .headline.hl4:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    max-width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.newspaper .headline.hl5{
+    font-weight: 400;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl6{
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl6:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    max-width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+
+.newspaper .headline.hl6:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    max-width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.newspaper .headline.hl7{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl8{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl9{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.newspaper .headline.hl10{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+
+body{
+  letter-spacing: 0.0625em;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  line-height: 32px;
+  font-size: 14px;
+  color: #2f2f2f;
+  background-color: #f9f7f1;
+}
+
+a{
+  text-decoration: underline;
+  color: rgba(0, 86, 179, 0.8);
+}
+
+a:focus, a:hover{
+  color: rgba(0, 86, 179, 0.4);
+}
+
+
+strong{
+  color: rgba(255, 119, 72, 0.8);
+}
+
+
+blockquote{
+  /* consolidate this */
+  padding: 18px;
+  background: rgba(200, 200, 200, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}

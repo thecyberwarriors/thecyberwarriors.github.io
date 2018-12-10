@@ -1,0 +1,59 @@
+$circuit-green : #64a19d;
+$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+
+.dropdown-menu {
+  background-color: rgba(255,255,255,1.0);
+  color: $circuit-green-dark;
+}
+
+.nav-link, .nav-link:hover, .nav-link:focus {
+  border: none;
+  background-color: $circuit-green-dark;
+  color: rgba(255,255,255,0.5);
+  padding: 0.5rem;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+
+.nav-tabs .active, .dropdown-menu:focus {
+  background-color: rgba(255,255,255,1.0);
+  color: $circuit-green-dark;
+}
+
+.nav-tabs .active {
+  opacity: 0.8;
+  color: rgba(255,255,255, 1.0);
+  background-color: $circuit-green-dark;
+  border-bottom: 0.2rem solid rgba(255,255,255,1.0);
+  padding-bottom: 0.28rem;
+}
+
+.alert-primary {
+  margin: none;
+  border: none;
+  background-color: mix($circuit-green, $circuit-green-dark);
+  box-shadow: 8px 8px 2px mix(rgba(255,255,255,0.3), $circuit-green);
+  .btn-block {
+    border-radius: 2rem;
+    border-color: rgba(255,255,255,1.0);
+    color: rgba(255,255, 255, 1.0);
+    background-color: inherit;
+    opacity: 0.8;
+  }
+  .btn-block:hover {
+    opacity: 1.0;
+  }
+}
+
+.card {
+  width: 100%;
+}
+
+@media (max-width: 346px) {
+  .nav-link {
+    font-size: 12px;
+  }
+}
