@@ -1,0 +1,83 @@
+$circuit-green : #65a19d;
+$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+$bg-coming-soon : rgba(#efefef,0.1);
+
+$banner-header-overflow : 1120px;
+$mobile-width: 360;
+
+.btn-block {
+  border: none;
+  border-radius: 2rem;
+  color: white !important;
+  background-color: inherit !important;
+  background-image: linear-gradient(135deg, rgba($circuit-green,0.9) 0%, rgba($circuit-green, 0.7) 70%, rgba($circuit-green, 0.9)) !important;
+  opacity: 0.8;
+}
+.btn-block:hover {
+  color: rgba(255,255,255,0.5) !important;
+  background-color: $circuit-green;
+  opacity: 1.0;
+}
+
+.mat-wrap {
+  margin: 2rem;
+  margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  background-image: linear-gradient(135deg, rgba($bg-coming-soon,0.9) 0%, rgba($bg-coming-soon, 0.7) 50%, rgba($bg-coming-soon, 0.9)) !important;
+  box-shadow: 8px 8px 8px rgba(1, 1, 1, 0.2);
+
+}
+
+
+.jumbotron {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: transparent;
+
+  h1 {
+    color: rgba(255,255,255,0.7);
+    background-color: $circuit-green-dark;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 15px;
+    box-shadow: 8px 8px 2px mix(rgba(255,255,255,0.3), $circuit-green);
+  }
+}
+
+form, h2 {
+  margin-top: 1rem;
+}
+
+
+
+@media (max-width: 414px) {
+    .mat-wrap{
+      padding: 0.5rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      box-shadow: none;
+    }
+}
+
+@media (max-width: 912px) {
+  .jumbotron{
+    h1 {
+      font-size: 54px;
+      display: block;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $banner-header-overflow) {
+  .jumbotron{
+    padding: 1rem;
+    padding-top: 6rem;
+    h1 {
+      font-size: 42px;
+      display: block;
+    }
+  }
+}
