@@ -36,16 +36,6 @@ $circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
   border: none;
   background-color: mix($circuit-green, $circuit-green-dark);
   box-shadow: 8px 8px 2px mix(rgba(255,255,255,0.3), $circuit-green);
-  .btn-block {
-    border-radius: 2rem;
-    border-color: rgba(255,255,255,1.0);
-    color: rgba(255,255, 255, 1.0);
-    background-color: inherit;
-    opacity: 0.8;
-  }
-  .btn-block:hover {
-    opacity: 1.0;
-  }
 }
 
 .card {
