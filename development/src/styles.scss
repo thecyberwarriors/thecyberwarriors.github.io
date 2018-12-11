@@ -7,6 +7,14 @@ $circuit-green : #64a19d;
 $circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
 $compliment : #96789f;
 
+$banner-interview-overflow : 1120px;
+$banner-header-overflow : 522px;
+$mobile-width: 360;
+
+html {
+ scroll-behavior: smooth;
+}
+
 body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,19 +30,30 @@ select:-moz-focusring{
   text-shadow: 0 0 0 #000;
 }
 
+.fa-map-marker {
+  font-size: 32px;
+  color: $circuit-green;
+}
+
 .mat-wrap {
   background-color: rgba(255,255,255,0.7);
   padding: 1rem;
   box-shadow: 8px 8px 2px mix(rgba(255,255,255,0.3), $circuit-green);
 }
 
-.fa-map-marker {
-  font-size: 32px;
-  color: $circuit-green;
+.btn-block {
+  border-radius: 2rem;
+  border-color: rgba(255,255,255,1.0);
+  color: rgba(255,255, 255, 1.0);
+  background-color: rgba(255,255,255,1.0);
+  background-image: linear-gradient(135deg, rgba($circuit-green,0.9) 0%, rgba($circuit-green, 0.7) 70%, rgba($circuit-green, 0.9)) !important;
+  opacity: 0.8;
 }
-
-html {
- scroll-behavior: smooth;
+.btn-block:hover {
+  background-color: rgba(255,255,255,1.0);
+  border-color: rgba(255,255,255,1.0);
+  color: rgba(255,255, 255, 1.0);
+  opacity: 1.0;
 }
 
 @media (max-width: 414px) {
