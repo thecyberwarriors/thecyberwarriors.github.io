@@ -1,5 +1,4 @@
-$circuit-green : #65a19d;
-$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+@import '../../styles.scss';
 
 $banner-header-overflow : 472px;
 $mobile-width: 360;
