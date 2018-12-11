@@ -1,8 +1,6 @@
 @import '../../styles.scss';
 
 $bg-coming-soon : rgba(#efefef,0.1);
-$banner-header-overflow : 1120px;
-$mobile-width: 360;
 
 .mat-wrap {
   margin: 2rem;
@@ -55,7 +53,7 @@ form, h2 {
   }
 }
 
-@media (max-width: $banner-header-overflow) {
+@media (max-width: $banner-interview-overflow) {
   .jumbotron{
     padding: 1rem;
     padding-top: 6rem;
