@@ -1,9 +1,7 @@
-$circuit-green : #64a19d;
-$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
-$compliment : #96789f;
+@import '../../styles.scss';
+
 $banner-header-overflow : 522px;
 $mobile-width: 360;
-$bg-image : linear-gradient(127deg, rgba($circuit-green-dark,0.9) 0%, rgba($circuit-green-dark, 0.7) 75%, rgba($circuit-green-dark, 0.9));
 
 .jumbotron {
   min-height: 100vh;

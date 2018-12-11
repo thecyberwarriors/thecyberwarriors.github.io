@@ -1,5 +1,4 @@
-$circuit-green : #64a19d;
-$circuit-green-dark : mix($circuit-green, rgba(0,0,0, 0.5));
+@import '../../styles.scss';
 
 h5 {
   display: inline-block;
