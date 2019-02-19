@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { FieldGuideComponent } from './field-guide/field-guide.component';
 import { InterviewComponent } from './interview/interview.component';
+import { FaqsComponent } from './faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InterviewComponent } from './interview/interview.component';
     FooterComponent,
     RegisterComponent,
     FieldGuideComponent,
-    InterviewComponent
+    InterviewComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule
